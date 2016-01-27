@@ -36,14 +36,12 @@ public class Config
     
     @Bean(name="myParking")
     public Parking getParking() {
-    	Parking park = new Parking();
-    	return park;
+    	return  new Parking();
     }
     
     @Bean(name="carList")
     public List<Car> createCarList() {
      	Map<String, Car> carMap = myContext.getBeansOfType(Car.class);
-     	List<Car> carList = new ArrayList<>(carMap.values());
-    	return carList;
+    	return new ArrayList<>(carMap.values());
     }
 }
